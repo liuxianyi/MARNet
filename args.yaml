@@ -1,0 +1,61 @@
+common:
+    train_label_dir: your training label path.
+    train_visual_dir: your training vision modality path.
+    train_audio_dir: your training audio modality path.
+    train_tra_dir: your training trajectory modality path.
+    test_label_dir: your test label path.
+    test_visual_dir: your test vision modality path.
+    test_audio_dir: your test audio modality path.
+    test_tra_dir: your test trajectory modality path.
+    labelgcn_name: your labelVectorization path.
+    adj: your adjacency matrix path.
+    audio_dim: 2048
+    audio_out: 512
+    logger_name: your tensorboard log dir.
+    curve_tensorb: your visualization curve dir.
+    log_dir: your log dir.
+    num_classes: 63 # 63
+    lgcn_in_features: 300
+    lgcn_out_features: 2048
+    sl_in_dim: 2048
+    sl_hidden_dim: 1576
+    sl_out_dim: 1024
+    sl_dropout:
+    fusion_style: concat
+    dim_encoder: 3072
+    out_dim_common: 2048
+    atte_d_model: 189
+    d_u: 2048
+    d_c: 63
+    MA_dropout:
+    epochs: 200
+    lam1: 1
+    lam2: 1
+    lam3: 0.01
+    fusion_dropout:
+    learning_rate: 0.1
+    lr_update: 1000
+    batch_size: 128
+    log_step: 1
+    test_epoch: 5
+    grad_clip: 1
+    resume: 
+    difficult_examples: True
+    correlation_matrix: your generate path of correlation_matrix.
+    representions: your representation path.
+
+    lr_scheduler:
+        type: STEP
+        lr_steps: [50,100,150]
+        lr_mults: [0.1, 0.1, 0.1]
+        base_lr: 0.2
+        warmup_steps: 2500
+        warmup_lr: 0.8
+        max_iter: 62500
+
+    optimizer:
+        type: SGD
+        momentum: 0.9
+        weight_decay: 0.0001
+        nesterov: True
+
